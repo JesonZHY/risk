@@ -13,7 +13,7 @@ public class RibbonHelloController {
 
     @RequestMapping("/ribbon/call")
     public String call() {
-        String callServiceResult = restTemplate.getForObject("http://producer/", String.class);
+        String callServiceResult = restTemplate.getForObject("http://producer/hello", String.class);
         return callServiceResult;
     }
 }

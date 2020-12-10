@@ -19,7 +19,7 @@ public class CallHelloController {
         System.out.println("服务地址：" + instance.getUri());
         System.out.println("服务名称：" + instance.getServiceId());
 
-        String callServiceResult = new RestTemplate().getForObject(instance.getUri().toString() + "/", String.class);
+        String callServiceResult = new RestTemplate().getForObject(instance.getUri().toString() + "/hello", String.class);
         System.out.println(callServiceResult);
         return callServiceResult;
     }
