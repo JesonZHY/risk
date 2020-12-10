@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
+		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cn.nmac</groupId>
@@ -25,6 +25,8 @@
 		<module>producer1</module>
 		<module>producer2</module>
 		<module>consumer</module>
+		<module>hystrix</module>
+		<module>zuul</module>
 	</modules>
 
 	<properties>
@@ -75,6 +77,16 @@
 		<dependency>
 			<groupId>cn.nmac.risk</groupId>
 			<artifactId>consumer</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.nmac.risk</groupId>
+			<artifactId>hystrix</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.nmac.risk</groupId>
+			<artifactId>zuul</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
