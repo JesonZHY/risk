@@ -55,7 +55,7 @@ public class SysLoginController {
     public HttpResult login(@RequestBody LoginBean loginBean, HttpServletRequest request) {
         String account = loginBean.getAccount();
         String password = loginBean.getPassword();
-        String captcha = loginBean.getCaptcha();
+//        String captcha = loginBean.getCaptcha();
 
 /*        Object kaptcha = request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
         if (kaptcha == null) {

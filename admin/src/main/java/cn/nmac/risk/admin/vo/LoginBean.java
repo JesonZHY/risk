@@ -9,7 +9,7 @@ public class LoginBean {
 
 	private String account;
 	private String password;
-	private String captcha;
+//	private String captcha;
 	
 	public String getAccount() {
 		return account;
@@ -23,11 +23,11 @@ public class LoginBean {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCaptcha() {
-		return captcha;
-	}
-	public void setCaptcha(String captcha) {
-		this.captcha = captcha;
-	}
+//	public String getCaptcha() {
+//		return captcha;
+//	}
+//	public void setCaptcha(String captcha) {
+//		this.captcha = captcha;
+//	}
 	
 }
