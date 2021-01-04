@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
 @Configuration
-//@EnableWebSecurity
+@EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -47,8 +47,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/captcha.jpg").permitAll()
                 // 服务监控
                 .antMatchers("/actuator/**").permitAll()
-                // 其他所有请求需要身份认证
-                .anyRequest().authenticated();
+                // 其他所有请求不需要身份认证
+//                .anyRequest().authenticated();
+                .anyRequest().permitAll();
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler());
         http.addFilterBefore(new JwtAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
     }
