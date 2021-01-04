@@ -57,7 +57,7 @@ public class SysLoginController {
         String password = loginBean.getPassword();
         String captcha = loginBean.getCaptcha();
 
-        Object kaptcha = request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
+/*        Object kaptcha = request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
         if (kaptcha == null) {
             return HttpResult.error("验证码已失效");
         }
@@ -73,7 +73,7 @@ public class SysLoginController {
         }
         if (user.getStatus() == 0) {
             return HttpResult.error("账号已被锁定，请联系管理员");
-        }
+        }*/
 
         JwtAuthenticatioToken token = SecurityUtils.login(request, account, password, authenticationManager);
         return HttpResult.ok(token);
